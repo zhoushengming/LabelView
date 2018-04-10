@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ericcode.labelview.MainActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/bg_shape"/>
+
+
+    <com.ericcode.mylabelview.LabelView
+        android:id="@+id/labelView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="9dp"
+        android:background="@android:color/transparent"
+        app:labelAngle="40"
+        app:labelColor="#0044ff"
+        app:labelRound="10dp"
+        app:labelWidth="60dp"
+        app:text="重要"
+        app:textAngle="0"
+        app:textColor="@android:color/white"
+        app:textSize="14sp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:stretchColumns="1">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="圆角"/>
+
+            <SeekBar
+                android:id="@+id/labelRound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="90"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="label大小"/>
+
+            <SeekBar
+                android:id="@+id/labelWidth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="200"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="label倾斜度"/>
+
+            <SeekBar
+                android:id="@+id/labelRadius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="70"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="字体大小"/>
+
+            <SeekBar
+                android:id="@+id/textSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="50"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="字体倾斜度"/>
+
+            <SeekBar
+                android:id="@+id/textRadius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="360"/>
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
